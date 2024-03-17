@@ -5,7 +5,11 @@
         public double velocity { get; set; }
         public DrivingMode drivingMode { get; set; }
 
-
+        public Car()
+        {
+            velocity = 0;
+            drivingMode = DrivingMode.Stopped;
+        }
         public Boolean IsStopped()
         {
             return velocity == 0 ? true : false;
@@ -20,6 +24,7 @@
         public void IncreaseVelocity(double addedVelocity)
         {
             velocity += addedVelocity;
+            drivingMode = DrivingMode.Forward;
         }
 
         public abstract void Accelerate();
