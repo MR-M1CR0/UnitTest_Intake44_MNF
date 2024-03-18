@@ -33,6 +33,7 @@ namespace CarFactoryMVC.Repositories_DAL
 
         public Car GetCarById(int id)
         {
+            //throw new NotImplementedException();
             return context.Cars.Include(c=>c.Owner).SingleOrDefault(c => c.Id == id);
         }
 

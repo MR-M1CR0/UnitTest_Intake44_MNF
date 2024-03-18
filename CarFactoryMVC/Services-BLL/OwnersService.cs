@@ -64,7 +64,7 @@ namespace CarFactoryMVC.Services_BLL
 
             if (!isSucess) return "Something went wrong";
 
-            return $"Successfull \r\nCar of Id: {input.CarId} is bought by {owner.Name} with payment result {paymentResult}";
+            return $"Successfull \r\nCar of Id: {car.VIN} is bought by {owner.Name} with payment result {paymentResult}";
         }
     }
 }

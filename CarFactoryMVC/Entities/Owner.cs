@@ -10,8 +10,10 @@ namespace CarFactoryMVC.Entities
         public int Id { get; set; }
 
         public string Name { get; set; }
+
         //[ForeignKey("Car")]
         //public int? CarId { get; set; }
+
         [ValidateNever]
         public Car Car { get; set; }
 
