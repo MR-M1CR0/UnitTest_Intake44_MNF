@@ -62,5 +62,19 @@ namespace CarFactoryLibrary_Test
                 CarFactory.NewCar(CarTypes.Honda);
             });
         }
+
+        // -------------------------------------------------------------------------------
+        [Fact]
+        [Trait("Author", "Ahmed")]
+        [Trait("Priority", "3")]
+        public void NewCar_AskForBMW_BMW()
+        {
+            var result = CarFactory.NewCar(CarTypes.BMW);
+
+            Assert.NotNull(result);
+
+            Assert.IsType<BMW>(result);
+            Assert.IsAssignableFrom<Car>(result);
+        }
     }
 }

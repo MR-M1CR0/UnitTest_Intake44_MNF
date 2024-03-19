@@ -41,5 +41,20 @@ namespace CarFactoryLibrary_Test
             //Assert.Contains<Car>(carStore.cars, car => car.drivingMode == DrivingMode.Stopped);
 
         }
+
+        // -----------------------------------------------------------------------------
+
+        [Fact]
+        [Trait("Category", "AddCar")]
+        public void AddCar_SingleCar_CarAdded()
+        {
+            CarStore carStore = new CarStore();
+            Car car = new Toyota { velocity = 10, drivingMode = DrivingMode.Forward };
+
+            carStore.AddCar(car);
+
+            Assert.Contains(car, carStore.cars);
+        }
+
     }
 }

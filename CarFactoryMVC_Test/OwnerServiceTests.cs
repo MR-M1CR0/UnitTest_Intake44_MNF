@@ -17,11 +17,11 @@ namespace CarFactoryMVC_Test
     public class OwnerServiceTests : IDisposable
     {
         private readonly ITestOutputHelper outputHelper;
-
         Mock<ICarsRepository> carRepoMock;
         Mock<IOwnersRepository> ownerRepoMock;
         CashService cashService;
         OwnersService ownersService;
+
         public OwnerServiceTests(ITestOutputHelper outputHelper)
         {
             // test setup
